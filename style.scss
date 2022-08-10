@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Ubuntu:wght@300;400&display=swap');
+
+$fonts1: 32px;
+$fontf1: cursive;
+$fontf2: 'kalam';
+$fontf3: 'Ubuntu';
+
+$text1: uppercase;
+$text2: lowercase;
+$text3: capitalize;
+
+$color1: rgb(243, 160, 6);
+$color2: rgb(16, 74, 160);
+
+$padding: 50px;
+$height: 800px;
+$alignc: center;
+
+$fontw: (
+    "yell":rgb(243, 214, 50),
+    "whit":#f7f5f8,
+    "viol":#721a8d,
+);
+
+$layout-breakpoint-small: 960px;
+$layout-breakpoint-large: 961px;
+
+/*--------pag index--------*/
+.navbar {
+    width: 100%;
+
+    a {
+        font-size: $fonts1;
+        font-family: $fontf1;
+        color: $color1;
+        font-family: $fontf2;
+        text-shadow: 2px 2px 7px black;
+        text-align: $alignc;
+    }
+
+    a:hover {
+        color: map-get($fontw, viol);
+    }
+}
+
+.nav-item {
+    @media (min-width: $layout-breakpoint-small) {
+        border-left: none;
+    }
+
+    @media (min-width: $layout-breakpoint-large) {
+        border-left: 2px solid black;
+    }
+}
+
+.socialn a {
+    padding: 5px;
+    font-size: 20px;
+    color: $color2;
+    text-shadow: 2px 3px 7px black;
+    text-align: $alignc;
+}
+
+.carousel img {
+    width: auto;
+    height: 570px;
+}
+
+section {
+    font-family: $fontf3;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
+    h1 {
+        text-transform: $text1;
+        font-size: 45px;
+        color: map-get($fontw, whit);
+    }
+
+    p {
+        text-transform: $text2;
+        font-size: 29px;
+        color: map-get($fontw, whit)
+    }
+}
+
+.agenda {
+    margin-top: 4px;
+    background-image: url(./Multimedia/agenda.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 90px;
+}
+
+.ciudad {
+    margin-top: 4px;
+    height: 400px;
+    background-image: url(./Multimedia/ciudad.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: $alignc;
+    padding: 90px;
+}
+
+.banner {
+    width: auto;
+    height: auto;
+    background-color: rgb(12, 26, 218);
+    color: rgb(215, 224, 241);
+    text-align: $alignc;
+    font-size: 60px;
+    text-transform: $text1;
+}
+
+.guia {
+    margin-top: 4px;
+    padding: 25px;
+    height: 350px;
+    width: auto;
+    color: rgb(245, 234, 234);
+    background-image: url(./Multimedia/guia.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-family: $fontf3;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
+    h1 {
+        font-size: 45px;
+        text-transform: $text1;
+    }
+
+    p {
+        font-size: 39px;
+        text-transform: $text3;
+    }
+}
+
+.guia2 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: auto;
+    height: 450px;
+    color: $color1;
+    background-image: url(./Multimedia/naturaleza.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 70px;
+    font-family: $fontf3;
+    text-transform: $text1;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+
+    h1 {
+        font-size: 75px;
+        font-family: $fontf2;
+    }
+
+    p {
+        font-size: 39px;
+    }
+}
+
+footer {
+    height: auto;
+    width: auto;
+    background-color: rgb(17, 75, 150);
+}
+
+.row {
+    margin-right: 1px;
+}
+
+.texto {
+    display: flex;
+    padding: 25px;
+    color: map-get($fontw, whit);
+    font-family: $fontf3;
+    text-transform: $text3;
+
+    p {
+        padding: 7px;
+        border-left: 1px solid black;
+    }
+}
+
+.logo {
+    margin-left: 150px;
+    padding: 10px;
+    font-size: 35px;
+    width: auto;
+    font-family: $fontf2;
+    color: $color1;
+}
+
+.socialf {
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 15px;
+    margin-top: 5px;
+    color: rgb(238, 238, 240);
+    text-shadow: 2px 3px 7px black;
+    display: flex;
+}
+
+.arrow {
+    padding: 10px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 25px;
+    right: 35px;
+    box-shadow: 1px 1px 1px 2px #424444;
+
+    a {
+        color: map-get($fontw, whit);
+    }
+
+    a:hover {
+        color: $color1;
+    }
+}
+
+/*---------pag dormir----------*/
+.dormir {
+    background: linear-gradient(45grad, rgb(2, 2, 20), rgb(83, 130, 202));
+}
+
+.card0 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    font-family: $fontf3;
+    text-align: $alignc;
+    padding: $padding*2;
+    background-image: url(./Multimedia/hotel.jpg);
+    background-size: cover;
+    border-radius: 50px;
+    color: map-get($fontw, whit);
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+}
+
+.card1 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    font-family: $fontf3;
+    text-align: $alignc;
+    padding: $padding*2;
+    background-image: url(./Multimedia/hotel1.jpg);
+    background-size: cover;
+    border-radius: 50px;
+    color: map-get($fontw, whit);
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+}
+
+.card2 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    font-family: $fontf3;
+    text-align: $alignc;
+    padding: $padding*2;
+    background-image: url(./Multimedia/hotel2.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    border-radius: 50px;
+    color: map-get($fontw, whit);
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+}
+
+.card3 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    font-family: $fontf3;
+    text-align: $alignc;
+    padding: $padding*2;
+    background-image: url(./Multimedia/hotel3.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    border-radius: 50px;
+    color: map-get($fontw, whit);
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+}
+
+.card4 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    font-family: $fontf3;
+    text-align: $alignc;
+    padding: $padding*2;
+    background-image: url(./Multimedia/hotel4.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    border-radius: 50px;
+    color: map-get($fontw, whit);
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+}
+
+.card5 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    font-family: $fontf3;
+    text-align: $alignc;
+    padding: $padding*2;
+    background-image: url(./Multimedia/hotel5.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    border-radius: 50px;
+    color: map-get($fontw, whit);
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+}
+
+.card-body a {
+    color: map-get($fontw, whit);
+    border-radius: 20px;
+    text-transform: $text1;
+}
+
+/* ------------PAG HACER----------*/
+
+article {
+    padding: $padding - 30px;
+    text-align: $alignc;
+    font-family: $fontf3;
+    text-transform: $text1;
+    font-size: 27px;
+    width: auto;
+    color: map-get($fontw, whit);
+    text-shadow: 3px 3px 7px rgb(240, 235, 235);
+}
+
+.planifica {
+    background-color: $color1;
+    padding: $padding;
+    margin: 7px;
+    height: $height - 610px;
+    width: 310px;
+    position: relative;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px black;
+
+    &:hover {
+        cursor: pointer;
+        transform: rotateY(380grad);
+        transition: 2s;
+    }
+}
+
+.agencia {
+    background-color: $color1;
+    padding: $padding - 10px;
+    margin: 7px;
+    height: $height - 610px;
+    width: 310px;
+    position: relative;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px black;
+
+    &:hover {
+        cursor: pointer;
+        transform: rotateY(380grad);
+        transition: 2s;
+    }
+}
+
+.actividades {
+    background-color: $color1;
+    padding: $padding;
+    margin: 7px;
+    height: $height - 610px;
+    width: 310px;
+    position: relative;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px black;
+
+    &:hover {
+        cursor: pointer;
+        transform: rotateY(380grad);
+        transition: 2s;
+    }
+}
+
+.circuitos {
+    background-color: $color1;
+    padding: $padding;
+    margin: 7px;
+    height: $height - 610px;
+    width: 310px;
+    position: relative;
+    border-radius: 100px;
+    box-shadow: 5px 5px 5px black;
+
+    &:hover {
+        cursor: pointer;
+        transform: rotateY(380grad);
+        transition: 2s;
+    }
+}
+
+/*----------PAG COMER--------*/
+
+.comer h1 {
+    text-align: $alignc;
+    padding: $padding;
+    font-size: $fonts1 + 20px;
+    color: map-get($fontw, yell);
+    text-shadow: 4px 6px 8px black;
+}
+
+.card6 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/cerveceria.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+}
+
+.card7 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/coffee.jpg);
+    background-size: cover;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card8 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/fastfood.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card9 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/foodtruck.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card10 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/heladeria.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card11 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/parrilla.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card12 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/pizzeria.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card13 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/restaurat.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.card14 {
+    width: auto;
+    height: $height - 380px;
+    margin: 27px;
+    padding: $padding*2;
+    background-image: url(./Multimedia/vinoteca.jpg);
+    background-size: cover;
+    background-position: $alignc;
+    box-shadow: 2px 2px 2px rgb(43, 42, 42);
+
+    h5 {
+        font-size: 45px;
+        font-family: $fontf3;
+        color: map-get($fontw, whit);
+        text-transform: $text1;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    &:hover{
+        filter: grayscale(90%);    
+    }
+
+}
+
+.go {
+    padding: 15px;
+    font-size: 50px;
+    color: map-get($fontw, whit);
+    margin-left: -60px;
+}
+
+
+$light-background: #f2ece4;
+$light-text: #036;
+$dark-background: #6b717f;
+$dark-text: #d2e1dd;
+
+@mixin theme-footer ($light-theme) {
+
+    @if $light-theme ==dark {
+        background-color: $light-background;
+        color: $light-text;
+
+    }
+
+    @else {
+        background-color: $dark-background;
+        color: $dark-text;
+    }
+}
+
+footer {
+    @include theme-footer (light);
+}

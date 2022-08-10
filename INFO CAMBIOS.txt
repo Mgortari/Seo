@@ -1,0 +1,7 @@
+En este archivo sume en las 3 secciones
+las caracteristicas de SEO.
+Descripcion, mediante las etiquetas meta  
+Las palabras claves, mediante las etiquetas
+meta name keywords.
+Sass aplique, maps, if and else, include, mixin.
+En el proyecto final termino de completar las 5 pag, junto con lo que falte
